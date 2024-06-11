@@ -3,6 +3,8 @@ import { MdOutlineSearch } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { setOpenSidebar } from "../redux/slices/authSlice";
 import UserAvatar from "./UserAvatar";
+import { FaBars } from "react-icons/fa";
+import NotificationPanel from "./NotificationPanel";
 
 const Navbar = () => {
   const { user } = useSelector((state) => state.auth);
@@ -14,7 +16,7 @@ const Navbar = () => {
           onClick={() => dispatch(setOpenSidebar(true))}
           className="text-2xl text-gray-500 block md:hidden"
         >
-          open
+          <FaBars />
         </button>
         <div className="w-64 2xl:w-[400px] flex items-center py-2 px-3 gap-2 rounded-full bg-[#f3f4f6]">
           <MdOutlineSearch className="text-gray-500 text-xl" />
@@ -26,7 +28,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex gap-2 items-center">
-        {/* <NotificationPanel/> */}
+        <NotificationPanel />
         <UserAvatar />
       </div>
     </div>
