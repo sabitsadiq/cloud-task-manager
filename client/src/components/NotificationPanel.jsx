@@ -56,6 +56,7 @@ const NotificationPanel = () => {
   //   const { data, refetch } = useGetNotifcationsQuery();
   //   const [markAsRead] = useMarkNotiAsReadMutation();
   const readHandler = () => {};
+  const viewHandler = () => {};
   const callsToAction = [
     { name: "Cancel", href: "#", icon: "" },
     {
