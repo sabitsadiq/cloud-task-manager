@@ -853,7 +853,7 @@ export const tasks = [
       },
       {
         _id: "65c202d4aa62f32ffd1303cc",
-        name: "Codewave Asante",
+        name: "Sabit Sadiq",
         title: "Administrator",
         email: "admin@gmail.com",
       },
@@ -896,7 +896,7 @@ export const tasks = [
     team: [
       {
         _id: "65c202d4aa62f32ffd1303cc",
-        name: "Codewave Asante",
+        name: "Sabit Sadiq",
         title: "Administrator",
         email: "admin@gmail.com",
       },
@@ -978,7 +978,7 @@ export const tasks = [
     team: [
       {
         _id: "65c202d4aa62f32ffd1303cc",
-        name: "Codewave Asante",
+        name: "Sabit Sadiq",
         title: "Administrator",
         email: "admin@gmail.com",
       },
@@ -986,7 +986,7 @@ export const tasks = [
         _id: "65c27a0e18c0a1b750ad5cad",
         name: "John Doe",
         title: "Software Engineer",
-        email: "john.doe@example.com",
+        email: "john.doe@email.com",
       },
       {
         _id: "65c30b96e639681a13def0b5",
@@ -1060,7 +1060,7 @@ export const tasks = [
     team: [
       {
         _id: "65c202d4aa62f32ffd1303cc",
-        name: "Codewave Asante",
+        name: "Sabit Sadiq",
         title: "Administrator",
         email: "admin@gmail.com",
       },
@@ -1068,7 +1068,7 @@ export const tasks = [
         _id: "65c27a0e18c0a1b750ad5cad",
         name: "John Doe",
         title: "Software Engineer",
-        email: "john.doe@example.com",
+        email: "john.doe@email.com",
       },
       {
         _id: "65c30b96e639681a13def0b5",
@@ -1101,10 +1101,10 @@ export const tasks = [
 
 export const user = {
   _id: "662f32ffd1303cc",
-  name: "Codewave",
+  name: "sadiq",
   title: "Administrator",
   role: "Admin",
-  email: "admin@mts.com",
+  email: "admin@gmail.com",
   isAdmin: true,
   tasks: [],
   createdAt: "2024-02-06T09:58:44.794Z",
@@ -1132,7 +1132,7 @@ export const activitiesData = [
   {
     _id: "2",
     type: "assigned",
-    activity: "task to Codewave Asante",
+    activity: "task to Sadiq",
     date: new Date("2023-01-15").toISOString(),
     by: "Akwasi Asante",
   },
@@ -1148,14 +1148,14 @@ export const activitiesData = [
   {
     _id: "5",
     type: "bug",
-    activity: "bug to Codewave Asante",
+    activity: "bug to sadiq",
     date: new Date("2023-01-15").toISOString(),
     by: "Akwasi Asante",
   },
   {
     _id: "4",
     type: "completed",
-    activity: "Codewave Asante has completed the task assigned",
+    activity: "Sadiq has completed the task assigned",
     date: new Date("2023-01-15").toISOString(),
     by: "Akwasi Asante",
   },
