@@ -3,16 +3,9 @@ import Notice from "../models/notification.js";
 export const createTask = async (req, res) => {
   try {
     const { title, team, stage, priority, date, assets } = req.body;
-    const task = await Task.create({
-      title,
-      team,
-      stage: stage.toLowerCase(),
-      priority: priority.toLowerCase(),
-      date,
-      assets,
-    });
+
     let text = "Task has been assigned to you.";
-    if (task.team.length > 1) {
+    if (team.length > 1) {
       text = text + `and ${task.team.length - 1} others.`;
     }
 
@@ -20,7 +13,22 @@ export const createTask = async (req, res) => {
       text +
       `The task priority is set a ${
         task.priority
-      } priority, so check and act accordingly. The task date is ${task.date.toDateString()}. Thank you !!!`;
+      } priority, so check and act accordingly. The task date is ${new Date.toDateString()}. Thank you !!!`;
+    const activity = {
+      type: "assigned",
+      activity: text,
+      by: userId,
+    };
+
+    const task = await Task.create({
+      title,
+      team,
+      stage: stage.toLowerCase(),
+      priority: priority.toLowerCase(),
+      date,
+      assets,
+      activities: activity,
+    });
 
     await Notice.create({ team, text, task: task._id });
 

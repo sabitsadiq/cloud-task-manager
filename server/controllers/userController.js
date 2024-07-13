@@ -44,7 +44,7 @@ export const loginUser = async (req, res) => {
         message: "User account has been deactivated, contact the administrator",
       });
     }
-    const isMatch = await User.matchPassword(password);
+    const isMatch = await user.matchPassword(password);
     if (user && isMatch) {
       createJwt(res, user._id);
       user.password = undefined;
@@ -101,7 +101,7 @@ export const updateUserProfile = async (req, res) => {
       user.name = req.body.name || user.name;
       user.title = req.body.title || user.title;
       user.role = req.body.role || user.role;
-      const updatedUser = await User.save();
+      const updatedUser = await user.save();
       user.password = undefined;
       res.status(201).json({
         status: true,

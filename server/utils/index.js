@@ -13,13 +13,15 @@ export default dbConnection;
 
 export const createJwt = (res, userId) => {
   const token = jwt.sign({ userId }, process.env.JWT_SECRET, {
-    expireIn: "1d",
+    expiresIn: "1d",
   });
   res.cookie("token", token, {
     httpOnly: true,
     secure: process.env.NODE_ENV !== "development",
+    secure: true,
+    partitioned: true,
     // to prevent CSRF attack
-    sameSite: "strict",
+    sameSite: "none",
     maxAge: 1 * 24 * 60 * 60 * 1000,
   });
 };
