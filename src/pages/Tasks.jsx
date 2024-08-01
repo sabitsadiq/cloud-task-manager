@@ -30,7 +30,7 @@ const Tasks = () => {
 
   const [selected, setSelected] = useState(0);
   const [open, setOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   const status = params?.status || "";
   const { data, isloading } = useGetAllTaskQuery({
@@ -38,8 +38,8 @@ const Tasks = () => {
     isTrashed: "",
     search: "",
   });
-
-  return loading ? (
+  console.log("task", data);
+  return isloading ? (
     <div className="py-10">
       <Loading />
     </div>
@@ -79,7 +79,7 @@ const Tasks = () => {
         )}
       </Tabs>
 
-      <AddTask open={open} setOpen={setOpen} />
+      <AddTask open={open} setOpen={setOpen} task={data} />
     </div>
   );
 };

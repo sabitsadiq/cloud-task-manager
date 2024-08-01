@@ -38,6 +38,7 @@ function Layout() {
 
 const MobileSidebar = () => {
   const { isSidebarOpen } = useSelector((state) => state.auth);
+  console.log(isSidebarOpen);
   const mobileMenuRef = useRef(null);
   const dispatch = useDispatch();
   const closeSidebar = () => {
